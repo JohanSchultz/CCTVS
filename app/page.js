@@ -189,7 +189,7 @@ export default function Home() {
                       {history.map((item) => (
                         <li
                           key={item.id}
-                          className="grid grid-cols-3 items-center gap-4 py-2"
+                          className="grid grid-cols-3 items-center gap-4 py-2 odd:bg-sky-50 even:bg-rose-50"
                         >
                           <div className="font-medium text-slate-900">
                             {item.litres_per_100km}
