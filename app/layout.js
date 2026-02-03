@@ -20,6 +20,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header className="bg-slate-900/80 text-slate-50">
+          <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-3 text-sm">
+            <a href="/" className="font-semibold tracking-tight">
+              Verbruik
+            </a>
+            <nav className="flex items-center gap-4">
+              <a
+                href="/settings"
+                className="rounded-md px-2 py-1 text-xs font-medium text-slate-100 hover:bg-slate-800"
+              >
+                Security settings
+              </a>
+              <a
+                href="/login"
+                className="rounded-md px-2 py-1 text-xs font-medium text-slate-100 hover:bg-slate-800"
+              >
+                Sign in
+              </a>
+            </nav>
+          </div>
+        </header>
         {children}
       </body>
     </html>
