@@ -83,7 +83,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-blue-950 text-slate-50">
       <div className="mx-auto max-w-xl px-6 py-16">
         <header className="mb-8">
           <h1 className="text-3xl font-semibold tracking-tight">
@@ -94,7 +94,7 @@ export default function Home() {
           </p>
         </header>
 
-        <section className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <section className="rounded-2xl bg-yellow-50 p-6 shadow-sm ring-1 ring-yellow-100 text-slate-900">
           <label className="block text-sm font-medium text-slate-700">
             Litres per 100 km
             <input
@@ -168,7 +168,7 @@ export default function Home() {
           )}
 
           {supabase && (
-            <div className="mt-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+            <div className="mt-3 rounded-2xl bg-yellow-50 p-4 shadow-sm ring-1 ring-yellow-100 text-slate-900">
               {historyLoading ? (
                 <p className="text-sm text-slate-500">Loading history…</p>
               ) : historyError ? (
