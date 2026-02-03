@@ -178,27 +178,33 @@ export default function Home() {
                   No conversions stored yet. Do a conversion to see it here.
                 </p>
               ) : (
-                <ul className="divide-y divide-slate-100">
-                  {history.map((item) => (
-                    <li
-                      key={item.id}
-                      className="flex items-center justify-between gap-4 py-2 text-sm"
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-medium text-slate-900">
-                          {item.litres_per_100km} L/100km
-                        </span>
-                        <span className="text-xs text-slate-500">
+                <div className="space-y-2">
+                  <div className="grid grid-cols-3 gap-4 border-b border-slate-100 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    <span>L/100 km</span>
+                    <span>MPG (UK / US)</span>
+                    <span className="text-right">Date / time</span>
+                  </div>
+
+                  <ul className="divide-y divide-slate-100 text-sm">
+                    {history.map((item) => (
+                      <li
+                        key={item.id}
+                        className="grid grid-cols-3 items-center gap-4 py-2"
+                      >
+                        <div className="font-medium text-slate-900">
+                          {item.litres_per_100km}
+                        </div>
+                        <div className="text-xs text-slate-700">
+                          <div>UK: {item.mpg_uk}</div>
+                          <div>US: {item.mpg_us}</div>
+                        </div>
+                        <div className="text-right text-xs text-slate-500">
                           {new Date(item.created_at).toLocaleString()}
-                        </span>
-                      </div>
-                      <div className="text-right text-xs text-slate-600">
-                        <div>UK: {item.mpg_uk}</div>
-                        <div>US: {item.mpg_us}</div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </div>
           )}
